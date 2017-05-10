@@ -1,0 +1,31 @@
+body,html { height: 100% }
+
+#page {
+    height: 100%;
+    width: 100%;
+    width: device-width;
+}
+
+@media screen and (min-width: 980px) /* Desktop */ {
+  #page {
+      background: url('/i/background_HD.jpg');
+      background-size: 100%;
+      background-repeat: no-repeat;
+  }
+}
+
+@media screen  and (max-width: 979px) /* Tablet */ {
+  #page {      
+      background: url('/i/background_MB.jpg');
+      background-size: 100%;
+      background-repeat: no-repeat;
+  }
+}
+
+@media screen and (max-width: 500px) /* Mobile */ {
+  #page {      
+      background: url('/i/background_MB.jpg');
+      background-size: 100%;
+      background-repeat: no-repeat;
+  }
+}

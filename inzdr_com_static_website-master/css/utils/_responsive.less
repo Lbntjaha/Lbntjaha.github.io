@@ -1,0 +1,128 @@
+// Media query Extra small devices Phones (<768px) //
+
+@media screen and (max-width: 767px) { 
+	.screen-changer {
+		padding: 0px!important;
+		text-align: center;
+		margin: 50px 0px;
+		.background-iphone {
+			left: 50%;
+      transform: translateX(-50%);
+		}		
+		img {
+			left: 50%!important;
+			transform: translate(-50%);
+		}
+	}
+	.tcycle {
+		text-align: center;
+		right: 0px!important;
+	}
+	.on-store {
+		margin-top: 70px;
+		top: initial;
+		img {
+			margin-bottom: 25px;
+		}
+		h1 {
+			font-size: 26px;
+		}
+	}
+	footer {
+		.copyright {
+			width: 100%;
+			h4 {
+				text-align: center;
+			}
+		}
+		.links {
+			width: 100%;
+			text-align: center;
+				li {
+				}
+			}
+		}		
+}
+
+@media screen and (max-width: 625px) { 
+	#newsletter{
+		width:99%;
+		padding: 0px;
+		margin: 0 auto;
+	}
+	.cookies {
+		right: 0px!important;
+		width: 100%!important;
+	}
+}
+
+@media handheld, only screen and (min-width: 801px), only screen and (min-device-width: 801px)  {
+    // #hoofdcollumn {margin: 10px 5%; width:90%};
+    .inzdr-gif {
+    	display: none;
+    }    
+}
+@media handheld, only screen and (max-width: 802px), only screen and (max-device-width: 802px)  {
+    // #hoofdcollumn {margin: 10px 5%; width:90%};    
+    .coming-soon {
+    	display: none!important;
+    }
+    .transparent-logo {
+	    left: 50%;
+	    transform: translate(-50%,0);
+	  }
+    .text-video {
+    	display: inherit!important;
+    }
+    #hero-text {
+    -webkit-transform: translate(0, -50%)!important;
+	      -ms-transform: translate(0, -50%)!important;
+	          transform: translate(0, -50%)!important;
+			top: 50%!important;
+			left: 0!important;
+    }
+}
+@media only screen and (min-device-width: 600px) and (max-device-width: 800px){ 
+	.text-video {
+			font-size: 40px!important;
+		span {
+			font-size: 40px!important;
+		}
+	}
+}
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+ .coming-soon {
+    	display: none!important;
+  }
+	.inzdr-gif {
+		display: inherit;
+	}
+	.text-video {
+		display: inherit!important;	
+		font-size: 35px!important;
+		span {
+			font-size: 35px!important;
+		}	
+	}
+	 #hero-text {
+	  -webkit-transform: translate(0, -50%)!important;
+      -ms-transform: translate(0, -50%)!important;
+          transform: translate(0, -50%)!important;
+		top: 50%!important;
+		left: 0!important;
+  }
+}
+
+@media only screen and (max-device-width: 800px) {
+	#main {
+		.intro {
+			h3 {
+				font-size: 20px!important;
+			}
+		}
+	}
+}
