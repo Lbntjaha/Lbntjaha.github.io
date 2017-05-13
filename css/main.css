@@ -1,0 +1,38 @@
+body {
+	margin: 0px;
+}
+nav {
+	background-color: #fafafa;
+}
+.top-nav ul {
+	list-style: none;
+}
+.input {
+	position: relative;
+	width: 635px;
+}
+.input .input-mic-icon {
+	width: 15px;
+	position: absolute;
+  right: 70px;
+  top: 29%;
+}
+.input .input-search-icon {
+	width: 22px;
+	position: absolute;
+	top: 28%;
+	right: 20px;
+}
+.logo {
+	width: 120;
+}
+.nav-input {
+	border: none;
+	width: 100%;
+	border-radius: 2px;
+	height: 44px;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+}
+.nav-input:hover {
+	box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08);
+}
