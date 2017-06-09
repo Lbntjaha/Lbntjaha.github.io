@@ -1,0 +1,80 @@
+.video {
+	position: absolute;
+	z-index: 0px;
+	min-height: 100%;
+	min-width: 100%;
+	width: auto;
+	height: auto;
+	opacity: 1;
+	overflow: hidden;
+	margin: 0px;
+	padding: 0px;
+}
+#bg_pattern { 
+background-image: url('../images/bg.png'); 
+position: absolute; 
+opacity: 0.8; 
+left: 0px; 
+top: 0px; 
+width: 100%; 
+z-index: 10;
+height: 100%; 
+}
+#bg_color {
+	background-color: #315854;
+	position: absolute; 
+	opacity: 0.3; 
+	left: 0px; 
+	top: 0px; 
+	width: 100%; 
+	z-index: 10;
+	height: 100%; 
+}
+.inzdr-bg {
+	-webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: fixed;
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	width: auto;
+	height: auto;	
+	min-width: 100%;
+	min-height: 100%;
+}
+#hero-text{
+	-webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+	display:none;
+	opacity:0;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+  img {
+  	margin: 0 auto;
+  }
+}
+.text-video {
+	color: #fff;
+	font-size: 20px;
+	display: none;
+	text-align: center;
+	span {
+		float: right;
+		font-size: 20px;
+		font-weight: 500!important;
+		padding-top: 10px;
+	}
+}
+.scroll-arrow {
+		position: absolute;
+		bottom: 10px;
+		left: 50%;
+		transform: translate(-50%, 0);
+		transition: opacity 0.4s ease;
+}
+.hide-arrow {
+	opacity: 0;
+}

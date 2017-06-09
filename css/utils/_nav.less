@@ -1,0 +1,30 @@
+nav {
+	background-color: #263238;
+	height: 80px;
+	img {
+		margin-top: 14px;
+		width: 105px;
+	}
+	ul {
+		float: right;
+		line-height: 80px;
+		margin: 0px;
+		li {
+			a {
+					color: #fff;
+					transition: color .2s ease;
+					font-size: 18px;
+					font-weight: 300;
+					&:hover {
+						color: @light-blue;
+					}
+				}
+			}
+		}
+	}
+	.transparent-logo {
+		position: fixed;
+		z-index: 1;
+		background-color: transparent;
+		padding: 0px 15px;
+	}
