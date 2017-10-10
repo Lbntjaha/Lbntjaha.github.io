@@ -1,0 +1,1661 @@
+<!doctype html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title></title>
+
+	<link rel="stylesheet" href="/assets/fabricator/styles/f.css">
+
+	<!-- toolkit styles -->
+	<link rel="stylesheet" href="/assets/toolkit/styles/toolkit.css">
+	<!-- /toolkit styles -->
+
+</head>
+<body>
+
+		<!-- fabricator icons -->
+		<svg style="display: none;">
+			<symbol id="f-icon-code" viewBox="0 0 512 512">
+				<path d="M377.3 121.3l-40.5 40.4 94.4 94.3-94.4 94.3 40.5 40.4L512 256zM134.7 121.3L0 256l134.7 134.7 40.5-40.4L80.8 256l94.4-94.3zM281.8 103.8zM230.183 408.16l-29.233-7.97 80.85-296.484 29.234 7.972z"/>
+			</symbol>
+			<symbol id="f-icon-notes" viewBox="0 0 512 512">
+				<path d="M443.8 0H68.2C30.6 0 0 30.5 0 68v264.2c0 16.6 8.9 29.5 25.9 37.5 15.3 7.2 33.1 8.4 40.1 8.5V512l201.6-134h176.1c37.6 0 68.2-30.3 68.2-67.8V68c.1-37.5-30.5-68-68.1-68zM114 438V330H68.2c-11.1 0-19.2-8.8-19.2-19.8V68c0-11 8.2-20 19.2-20h375.5c11.1 0 19.2 9 19.2 20v242.2c0 11-8.2 19.8-19.2 19.8H244.2L114 438z"/>
+			</symbol>
+			<symbol id="f-icon-labels" viewBox="0 0 512 512">
+				<path d="M304 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM464 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM144 280c0 13.2-10.8 24-24 24H72c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48z"/>
+			</symbol>
+			<symbol id="f-icon-menu" viewBox="0 0 512 512">
+				<path d="M512 100c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 212c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 324c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 436c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24z"/>
+			</symbol>
+			<symbol id="f-icon-settings" viewBox="0 0 512 512">
+				<path d="M256 377.3c-67.5 0-121.6-53.9-121.6-121.3s54-121.3 121.6-121.3S377.6 188.6 377.6 256 323.5 377.3 256 377.3zm0-215.6c-52.7 0-94.6 41.8-94.6 94.3s41.9 94.3 94.6 94.3 94.6-41.8 94.6-94.3-41.9-94.3-94.6-94.3zM293.2 512h-72.9L200 450c-13.5-4-27-9.4-39.2-16.2l-59.4 29.6L50 412.3 79.7 353c-6.8-12.1-12.2-25.6-16.2-39.1L0 292.4v-72.8l62.1-20.2c4.1-13.5 9.5-26.9 16.2-39.1L48.6 101 100 49.9l59.4 29.6c12.2-6.7 25.7-12.1 39.2-16.2L220.2 0h72.9l20.3 62c13.5 4 27 9.4 39.2 16.2L412 48.5l51.3 51.2-29.7 59.3c6.8 12.1 12.2 25.6 16.2 39.1l62.1 20.2V291l-62.1 20.2c-4.1 13.5-9.5 26.9-16.2 39.1l29.7 59.3-51.3 51.2-59.4-29.6c-12.2 6.7-25.7 12.1-39.2 16.2L293.2 512zm-54.1-26.9h35.1l18.9-57.9 6.8-1.3c16.2-4 31.1-10.8 45.9-18.9l6.8-4 54 26.9 24.3-24.3-27-53.9 4.1-6.7c8.1-13.5 14.9-29.6 18.9-45.8l1.4-6.7 58.1-18.9v-35l-58.1-18.9-1.4-6.7c-4.1-16.2-10.8-31-18.9-45.8l-4.1-6.7 27-53.9-24.3-24.3-54 26.9-6.8-4c-14.8-8.2-29.7-14.9-45.9-19l-6.8-1.3L274.2 27h-35.1l-18.9 57.9-6.8 1.3c-16.2 4-31.1 10.8-45.9 18.9l-6.8 4-54-26.9-24.3 24.3 27 53.9-4.1 6.7c-8.1 13.5-14.9 29.6-18.9 45.8l-1.4 6.7-58 18.9v35l58.1 18.9 1.4 6.7c4.1 16.2 10.8 31 18.9 45.8l4.1 6.7-27 53.9 24.3 24.3 54-26.9 6.8 4c14.9 8.1 29.7 14.8 45.9 18.9l6.8 1.3 18.8 58z"/>
+			</symbol>
+		</svg>
+		<!-- /fabricator icons -->
+		<!-- fabricator menu -->
+		<div class="f-menu">
+		
+			<div class="f-controls">
+				<div class="f-control f-global-control" data-f-toggle-control="labels" title="Toggle Labels">
+					<svg>
+						<use xlink:href="#f-icon-labels" />
+					</svg>
+				</div>
+				<div class="f-control f-global-control" data-f-toggle-control="notes" title="Toggle Notes">
+					<svg>
+						<use xlink:href="#f-icon-notes" />
+					</svg>
+				</div>
+				<div class="f-control f-global-control" data-f-toggle-control="code" title="Toggle Code">
+					<svg>
+						<use xlink:href="#f-icon-code" />
+					</svg>
+				</div>
+			</div>
+		
+			<ul>
+		
+				<li>
+					<a href="index.html" class="f-menu__heading">Overview</a>
+				</li>
+		
+				<li>
+					<a href="atoms.html" class="f-menu__heading">Atoms</a>
+					<ul>
+						<li>
+							<a href="atoms.html#button">Button</a>
+						</li>
+						<li>
+							<a href="atoms.html#logo">Logo</a>
+						</li>
+						<li>
+							<a href="atoms.html#table">Table</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="molecules.html" class="f-menu__heading">Molecules</a>
+					<ul>
+						<li>
+							<a href="molecules.html#about-box">About Box</a>
+						</li>
+						<li>
+							<a href="molecules.html#checkbox">Checkbox</a>
+						</li>
+						<li>
+							<a href="molecules.html#mining">Mining</a>
+						</li>
+						<li>
+							<a href="molecules.html#ordered">Ordered</a>
+						</li>
+						<li>
+							<a href="molecules.html#paragraph">Paragraph</a>
+						</li>
+						<li>
+							<a href="molecules.html#radio">Radio</a>
+						</li>
+						<li>
+							<a href="molecules.html#select">Select</a>
+						</li>
+						<li>
+							<a href="molecules.html#text-input">Text Input</a>
+						</li>
+						<li>
+							<a href="molecules.html#textarea">Textarea</a>
+						</li>
+						<li>
+							<a href="molecules.html#unordered">Unordered</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="organisms.html" class="f-menu__heading">Organisms</a>
+					<ul>
+						<li>
+							<a href="organisms.html#about-section">About Section</a>
+						</li>
+						<li>
+							<a href="organisms.html#colla">Colla</a>
+						</li>
+						<li>
+							<a href="organisms.html#contact-form">Contact Form</a>
+						</li>
+						<li>
+							<a href="organisms.html#footer">Footer</a>
+						</li>
+						<li>
+							<a href="organisms.html#form">Form</a>
+						</li>
+						<li>
+							<a href="organisms.html#gem-details">Gem Details</a>
+						</li>
+						<li>
+							<a href="organisms.html#gems">Gems</a>
+						</li>
+						<li>
+							<a href="organisms.html#gemstones">Gemstones</a>
+						</li>
+						<li>
+							<a href="organisms.html#header">Header</a>
+						</li>
+						<li>
+							<a href="organisms.html#heritage-section">Heritage Section</a>
+						</li>
+						<li>
+							<a href="organisms.html#hero">Hero</a>
+						</li>
+						<li>
+							<a href="organisms.html#introduction">Introduction</a>
+						</li>
+						<li>
+							<a href="organisms.html#mission">Mission</a>
+						</li>
+						<li>
+							<a href="organisms.html#news">News</a>
+						</li>
+						<li>
+							<a href="organisms.html#office">Office</a>
+						</li>
+						<li>
+							<a href="organisms.html#our-team">Our Team</a>
+						</li>
+						<li>
+							<a href="organisms.html#presentation">Presentation</a>
+						</li>
+						<li>
+							<a href="organisms.html#vision">Vision</a>
+						</li>
+					</ul>
+				</li>
+		
+				<li>
+					<a href="pages.html" class="f-menu__heading">Pages</a>
+					<ul>
+						<li>
+							<a href="pages/about.html">About</a>
+						</li>
+						<li>
+							<a href="pages/contact.html">Contact</a>
+						</li>
+						<li>
+							<a href="pages/emerald.html">Emerald</a>
+						</li>
+						<li>
+							<a href="pages/heritage.html">Heritage</a>
+						</li>
+						<li>
+							<a href="pages/home.html">Home</a>
+						</li>
+						<li>
+							<a href="pages/news-open.html">News Open</a>
+						</li>
+						<li>
+							<a href="pages/news.html">News</a>
+						</li>
+						<li>
+							<a href="pages/ruby.html">Ruby</a>
+						</li>
+					</ul>
+				</li>
+		
+				<li>
+					<a href="docs.html" class="f-menu__heading">Docs</a>
+					<ul>
+						<li>
+							<a href="docs.html#javascript">Javascript</a>
+						</li>
+					</ul>
+				</li>
+		
+			</ul>
+		
+		
+		</div>
+		<!-- /fabricator menu -->
+		<div class="f-container">
+			<div class="f-control-bar">
+				<div class="f-control f-menu-toggle">
+					<svg>
+						<use xlink:href="#f-icon-menu" />
+					</svg>
+				</div>
+			</div>
+
+
+	
+<h1 data-f-toggle="labels">Organisms</h1>
+
+
+<div class="f-item-group" id="about-section">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">About Section</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<div class="about-section">
+	<div class="about-section__content">
+		<div class="about-box__content ">
+			<h5 class="about-box__title">ABOUT US</h5>
+			<h3 class="about-box__subtitle">
+				Behind every gem is a <br> fascinating story.
+			</h3>
+			<p class="about-box__text">
+				Our heritage is composed of more than four generations of <br> ethical experience in the gemstone arena. Our family owned <br> trade is renowned for its exclusive collection, fine <br> craftsmanship, exceptional dedication to our customers and <br>unparalleled
+				expertise.
+			</p>
+			<a href="about.html" class="about-box__href">READ MORE</a>
+		</div>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;about-section&quot;&gt;
+	&lt;div class&#x3D;&quot;about-section__content&quot;&gt;
+		&lt;div class&#x3D;&quot;about-box__content &quot;&gt;
+			&lt;h5 class&#x3D;&quot;about-box__title&quot;&gt;ABOUT US&lt;/h5&gt;
+			&lt;h3 class&#x3D;&quot;about-box__subtitle&quot;&gt;
+				Behind every gem is a &lt;br&gt; fascinating story.
+			&lt;/h3&gt;
+			&lt;p class&#x3D;&quot;about-box__text&quot;&gt;
+				Our heritage is composed of more than four generations of &lt;br&gt; ethical experience in the gemstone arena. Our family owned &lt;br&gt; trade is renowned for its exclusive collection, fine &lt;br&gt; craftsmanship, exceptional dedication to our customers and &lt;br&gt;unparalleled
+				expertise.
+			&lt;/p&gt;
+			&lt;a href&#x3D;&quot;about.html&quot; class&#x3D;&quot;about-box__href&quot;&gt;READ MORE&lt;/a&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="colla">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Colla</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<section class="colla">
+	<div class="colla__container">
+		<div class="colla__subtitle">CHECK OUR </div>
+		<div class="colla__title">COLLABORATIONS</div>
+
+		<div class="colla__box">
+			<div class="colla__box--image">
+				<img src="../../assets/toolkit/images/gems3.png" alt="">
+			</div>
+			<div class="colla__box--title">EMERALD EARRINGS</div>
+		</div>
+
+		<div class="colla__box">
+			<div class="colla__box--image">
+				<img src="../../assets/toolkit/images/gems1.png" alt="">
+			</div>
+			<div class="colla__box--title">EMERALD EARRINGS</div>
+		</div>
+
+		<div class="colla__box">
+			<div class="colla__box--image">
+				<img src="../../assets/toolkit/images/gems2.png" alt="">
+			</div>
+			<div class="colla__box--title">EMERALD EARRINGS</div>
+		</div>
+
+		<div class="colla__box">
+			<div class="colla__box--image">
+				<img src="../../assets/toolkit/images/gems1.png" alt="">
+			</div>
+			<div class="colla__box--title">EMERALD EARRINGS</div>
+		</div>
+
+		<div class="colla__box">
+			<div class="colla__box--image">
+				<img src="../../assets/toolkit/images/gems2.png" alt="">
+			</div>
+			<div class="colla__box--title">EMERALD EARRINGS</div>
+		</div>
+
+		<div class="colla__box">
+			<div class="colla__box--image">
+				<img src="../../assets/toolkit/images/gems3.png" alt="">
+			</div>
+			<div class="colla__box--title">EMERALD EARRINGS</div>
+		</div>
+		<h4 class="colla__showmore">show more</h4>
+	</div>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class&#x3D;&quot;colla&quot;&gt;
+	&lt;div class&#x3D;&quot;colla__container&quot;&gt;
+		&lt;div class&#x3D;&quot;colla__subtitle&quot;&gt;CHECK OUR &lt;/div&gt;
+		&lt;div class&#x3D;&quot;colla__title&quot;&gt;COLLABORATIONS&lt;/div&gt;
+
+		&lt;div class&#x3D;&quot;colla__box&quot;&gt;
+			&lt;div class&#x3D;&quot;colla__box--image&quot;&gt;
+				&lt;img src&#x3D;&quot;../../assets/toolkit/images/gems3.png&quot; alt&#x3D;&quot;&quot;&gt;
+			&lt;/div&gt;
+			&lt;div class&#x3D;&quot;colla__box--title&quot;&gt;EMERALD EARRINGS&lt;/div&gt;
+		&lt;/div&gt;
+
+		&lt;div class&#x3D;&quot;colla__box&quot;&gt;
+			&lt;div class&#x3D;&quot;colla__box--image&quot;&gt;
+				&lt;img src&#x3D;&quot;../../assets/toolkit/images/gems1.png&quot; alt&#x3D;&quot;&quot;&gt;
+			&lt;/div&gt;
+			&lt;div class&#x3D;&quot;colla__box--title&quot;&gt;EMERALD EARRINGS&lt;/div&gt;
+		&lt;/div&gt;
+
+		&lt;div class&#x3D;&quot;colla__box&quot;&gt;
+			&lt;div class&#x3D;&quot;colla__box--image&quot;&gt;
+				&lt;img src&#x3D;&quot;../../assets/toolkit/images/gems2.png&quot; alt&#x3D;&quot;&quot;&gt;
+			&lt;/div&gt;
+			&lt;div class&#x3D;&quot;colla__box--title&quot;&gt;EMERALD EARRINGS&lt;/div&gt;
+		&lt;/div&gt;
+
+		&lt;div class&#x3D;&quot;colla__box&quot;&gt;
+			&lt;div class&#x3D;&quot;colla__box--image&quot;&gt;
+				&lt;img src&#x3D;&quot;../../assets/toolkit/images/gems1.png&quot; alt&#x3D;&quot;&quot;&gt;
+			&lt;/div&gt;
+			&lt;div class&#x3D;&quot;colla__box--title&quot;&gt;EMERALD EARRINGS&lt;/div&gt;
+		&lt;/div&gt;
+
+		&lt;div class&#x3D;&quot;colla__box&quot;&gt;
+			&lt;div class&#x3D;&quot;colla__box--image&quot;&gt;
+				&lt;img src&#x3D;&quot;../../assets/toolkit/images/gems2.png&quot; alt&#x3D;&quot;&quot;&gt;
+			&lt;/div&gt;
+			&lt;div class&#x3D;&quot;colla__box--title&quot;&gt;EMERALD EARRINGS&lt;/div&gt;
+		&lt;/div&gt;
+
+		&lt;div class&#x3D;&quot;colla__box&quot;&gt;
+			&lt;div class&#x3D;&quot;colla__box--image&quot;&gt;
+				&lt;img src&#x3D;&quot;../../assets/toolkit/images/gems3.png&quot; alt&#x3D;&quot;&quot;&gt;
+			&lt;/div&gt;
+			&lt;div class&#x3D;&quot;colla__box--title&quot;&gt;EMERALD EARRINGS&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;h4 class&#x3D;&quot;colla__showmore&quot;&gt;show more&lt;/h4&gt;
+	&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="contact-form">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Contact Form</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<section class="contact-form">
+	<div class="contact-form__container">
+		<div class="contact-form__form">
+			<form>
+				<h1 class="contact-form__form-title">TALK TO US</h1>
+				<div class="row">
+					<div class="contact-form__form--input">
+						<label><p class=contact-form__info>FIRST NAME</p>
+		        <input type="text" placeholder="" />
+		      </label>
+					</div>
+					<div class="contact-form__form--input">
+						<label><p class=contact-form__info>LAST NAME</p>
+		        <input type="text" placeholder="" />
+		      </label>
+					</div>
+					<div class="contact-form__form--input">
+						<label><p class=contact-form__info>EMAIL</p>
+		        <input type="email" placeholder="" />
+		      </label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="contact-form__form--input">
+						<label><p class=contact-form__info>TELEPHONE</p>
+		        <input type="text" placeholder="" />
+		      </label>
+					</div>
+					<div class="contact-form__form--input">
+						<label><p class=contact-form__info>COMPANY</p>
+		        <input type="text" placeholder="" />
+		      </label>
+					</div>
+					<div class="contact-form__form--input">
+						<label><p class=contact-form__info>SUBJECT</p>
+		        <input type="text" placeholder="" />
+		      </label>
+					</div>
+				</div>
+				<div class="contact-form__form--textarea">
+					<label>
+				  <p class=contact-form__info>MESSAGE</p>
+				  <textarea placeholder=""></textarea>
+				</label>
+					<button class="button">Submit</button>
+				</div>
+			</form>
+
+		</div>
+	</div>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class&#x3D;&quot;contact-form&quot;&gt;
+	&lt;div class&#x3D;&quot;contact-form__container&quot;&gt;
+		&lt;div class&#x3D;&quot;contact-form__form&quot;&gt;
+			&lt;form&gt;
+				&lt;h1 class&#x3D;&quot;contact-form__form-title&quot;&gt;TALK TO US&lt;/h1&gt;
+				&lt;div class&#x3D;&quot;row&quot;&gt;
+					&lt;div class&#x3D;&quot;contact-form__form--input&quot;&gt;
+						&lt;label&gt;&lt;p class&#x3D;contact-form__info&gt;FIRST NAME&lt;/p&gt;
+		        &lt;input type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;&quot; /&gt;
+		      &lt;/label&gt;
+					&lt;/div&gt;
+					&lt;div class&#x3D;&quot;contact-form__form--input&quot;&gt;
+						&lt;label&gt;&lt;p class&#x3D;contact-form__info&gt;LAST NAME&lt;/p&gt;
+		        &lt;input type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;&quot; /&gt;
+		      &lt;/label&gt;
+					&lt;/div&gt;
+					&lt;div class&#x3D;&quot;contact-form__form--input&quot;&gt;
+						&lt;label&gt;&lt;p class&#x3D;contact-form__info&gt;EMAIL&lt;/p&gt;
+		        &lt;input type&#x3D;&quot;email&quot; placeholder&#x3D;&quot;&quot; /&gt;
+		      &lt;/label&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;div class&#x3D;&quot;row&quot;&gt;
+					&lt;div class&#x3D;&quot;contact-form__form--input&quot;&gt;
+						&lt;label&gt;&lt;p class&#x3D;contact-form__info&gt;TELEPHONE&lt;/p&gt;
+		        &lt;input type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;&quot; /&gt;
+		      &lt;/label&gt;
+					&lt;/div&gt;
+					&lt;div class&#x3D;&quot;contact-form__form--input&quot;&gt;
+						&lt;label&gt;&lt;p class&#x3D;contact-form__info&gt;COMPANY&lt;/p&gt;
+		        &lt;input type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;&quot; /&gt;
+		      &lt;/label&gt;
+					&lt;/div&gt;
+					&lt;div class&#x3D;&quot;contact-form__form--input&quot;&gt;
+						&lt;label&gt;&lt;p class&#x3D;contact-form__info&gt;SUBJECT&lt;/p&gt;
+		        &lt;input type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;&quot; /&gt;
+		      &lt;/label&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;div class&#x3D;&quot;contact-form__form--textarea&quot;&gt;
+					&lt;label&gt;
+				  &lt;p class&#x3D;contact-form__info&gt;MESSAGE&lt;/p&gt;
+				  &lt;textarea placeholder&#x3D;&quot;&quot;&gt;&lt;/textarea&gt;
+				&lt;/label&gt;
+					&lt;button class&#x3D;&quot;button&quot;&gt;Submit&lt;/button&gt;
+				&lt;/div&gt;
+			&lt;/form&gt;
+
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="footer">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Footer</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<footer class="footer">
+	<div class="footer__container">
+		<div class="footer__logo">
+			<div class="logo ">
+				<a href="home.html">
+					<div class="logo__img"></div>
+					<h3>gemlegacy</h3>
+					<h4>gem hub</h4>
+				</a>
+			</div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec risus lectus. Donec in magna in nulla efficitur lobortis. Nulla volutpat..</p>
+		</div>
+		<div class="footer__sitemap">
+			<h4>Sitemap</h4>
+			<ul>
+				<li><a href="heritage.html">Heritage</a></li>
+				<li><a href="about.html">About us</a></li>
+				<li><a href="news.html">News</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</div>
+		<div class="footer__contact-us">
+			<h4>contact us</h4>
+			<p>
+				Gemslegacy Gem Hub <br> Doha (Qatar) <br> +974 5054 6452 <br> info@heritage.com
+			</p>
+		</div>
+		<div class="footer__follow-us">
+			<h4>Follow us on</h4>
+			<ul class="menu">
+				<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+		<div class="footer__line"></div>
+		<div class="footer__copyright">
+			<span>Copyright  ©  2017  Gemslegacy</span>
+			<span>Site by Mozaix LLC.</span>
+		</div>
+	</div>
+</footer>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;footer class&#x3D;&quot;footer&quot;&gt;
+	&lt;div class&#x3D;&quot;footer__container&quot;&gt;
+		&lt;div class&#x3D;&quot;footer__logo&quot;&gt;
+			&lt;div class&#x3D;&quot;logo &quot;&gt;
+				&lt;a href&#x3D;&quot;home.html&quot;&gt;
+					&lt;div class&#x3D;&quot;logo__img&quot;&gt;&lt;/div&gt;
+					&lt;h3&gt;gemlegacy&lt;/h3&gt;
+					&lt;h4&gt;gem hub&lt;/h4&gt;
+				&lt;/a&gt;
+			&lt;/div&gt;
+			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec risus lectus. Donec in magna in nulla efficitur lobortis. Nulla volutpat..&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;footer__sitemap&quot;&gt;
+			&lt;h4&gt;Sitemap&lt;/h4&gt;
+			&lt;ul&gt;
+				&lt;li&gt;&lt;a href&#x3D;&quot;heritage.html&quot;&gt;Heritage&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href&#x3D;&quot;about.html&quot;&gt;About us&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href&#x3D;&quot;news.html&quot;&gt;News&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href&#x3D;&quot;contact.html&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;footer__contact-us&quot;&gt;
+			&lt;h4&gt;contact us&lt;/h4&gt;
+			&lt;p&gt;
+				Gemslegacy Gem Hub &lt;br&gt; Doha (Qatar) &lt;br&gt; +974 5054 6452 &lt;br&gt; info@heritage.com
+			&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;footer__follow-us&quot;&gt;
+			&lt;h4&gt;Follow us on&lt;/h4&gt;
+			&lt;ul class&#x3D;&quot;menu&quot;&gt;
+				&lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;&lt;i class&#x3D;&quot;fa fa-instagram&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;&lt;i class&#x3D;&quot;fa fa-twitter&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;&lt;i class&#x3D;&quot;fa fa-facebook&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;footer__line&quot;&gt;&lt;/div&gt;
+		&lt;div class&#x3D;&quot;footer__copyright&quot;&gt;
+			&lt;span&gt;Copyright  ©  2017  Gemslegacy&lt;/span&gt;
+			&lt;span&gt;Site by Mozaix LLC.&lt;/span&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="form">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Form</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<form action="">
+	<div>
+		<label for="textInput">Text input</label>
+		<input type="text" id="textInput" /> </div>
+	<button class="button">Submit</button>
+
+	<button class="button" type="button" data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Fancy word for a beetle." data-position="right" data-alignment="top">
+	  <span class="icon icon-cart"></span>Right Top
+	</button></form>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;form action&#x3D;&quot;&quot;&gt;
+	&lt;div&gt;
+		&lt;label for&#x3D;&quot;textInput&quot;&gt;Text input&lt;/label&gt;
+		&lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;textInput&quot; /&gt; &lt;/div&gt;
+	&lt;button class&#x3D;&quot;button&quot;&gt;Submit&lt;/button&gt;
+
+	&lt;button class&#x3D;&quot;button&quot; type&#x3D;&quot;button&quot; data-tooltip aria-haspopup&#x3D;&quot;true&quot; class&#x3D;&quot;has-tip&quot; data-disable-hover&#x3D;&quot;false&quot; tabindex&#x3D;&quot;1&quot; title&#x3D;&quot;Fancy word for a beetle.&quot; data-position&#x3D;&quot;right&quot; data-alignment&#x3D;&quot;top&quot;&gt;
+	  &lt;span class&#x3D;&quot;icon icon-cart&quot;&gt;&lt;/span&gt;Right Top
+	&lt;/button&gt;&lt;/form&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="gem-details">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Gem Details</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<section class="gem-details">
+	<div class="gem-details__container">
+		<div class="gem-details__info">
+			<div class="gem-details__tabs">
+				<ul class="tabs" data-active-collapse="false" data-tabs id="collapsing-tabs">
+					<li class="tabs-title"><a href="#panel1c" aria-selected="true">COLOUR</a></li>
+					<li class="tabs-title is-active"><a href="#panel2c">CLARITY</a></li>
+					<li class="tabs-title"><a href="#panel3c">CUT</a></li>
+				</ul>
+
+				<div class="tabs-content" data-tabs-content="collapsing-tabs">
+					<div class="tabs-panel " id="panel1c"></div>
+					<div class="tabs-panel is-active" id="panel2c">
+						<h3>A gemstone’s clarity has to do with the number of inclusions that it contains, the size of those inclusions and their position within the gemstone. The fewer, smaller and less conspicuous the inclusions, the better. Importantly, however, inclusions
+							should not always be seen as being “bad” as they are also responsible for giving each </h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, lectus ut sagittis elementum, magna tellus feugiat libero, id egestas massa velit sit amet nisi. Nullam quam leo, sollicitudin ut mi vel, laoreet ullamcorper ipsum. Sed sagittis
+							vitae est id posuere. Fusce egestas eu nisi quis porta. Nam vel purus eu odio consectetur tristique vitae et neque. Nam eget tellus vulputate, maximus</p>
+					</div>
+					<div class="tabs-panel" id="panel3c"></div>
+				</div>
+			</div>
+		</div>
+		<div class="gem-details__image">
+			<ul class="heritage-section__gems--ul">
+				<li>
+					<img class="ruby-img" src="/assets/toolkit/images/ruby.png" alt="">
+					<div class="li-content">
+						<h2>RUBY</h2>
+						<p>Rubies have an almost other wordly quality that has beguiled and delighted humanity through the ages. As with all gemstones the colour should be even... throughout</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class&#x3D;&quot;gem-details&quot;&gt;
+	&lt;div class&#x3D;&quot;gem-details__container&quot;&gt;
+		&lt;div class&#x3D;&quot;gem-details__info&quot;&gt;
+			&lt;div class&#x3D;&quot;gem-details__tabs&quot;&gt;
+				&lt;ul class&#x3D;&quot;tabs&quot; data-active-collapse&#x3D;&quot;false&quot; data-tabs id&#x3D;&quot;collapsing-tabs&quot;&gt;
+					&lt;li class&#x3D;&quot;tabs-title&quot;&gt;&lt;a href&#x3D;&quot;#panel1c&quot; aria-selected&#x3D;&quot;true&quot;&gt;COLOUR&lt;/a&gt;&lt;/li&gt;
+					&lt;li class&#x3D;&quot;tabs-title is-active&quot;&gt;&lt;a href&#x3D;&quot;#panel2c&quot;&gt;CLARITY&lt;/a&gt;&lt;/li&gt;
+					&lt;li class&#x3D;&quot;tabs-title&quot;&gt;&lt;a href&#x3D;&quot;#panel3c&quot;&gt;CUT&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+
+				&lt;div class&#x3D;&quot;tabs-content&quot; data-tabs-content&#x3D;&quot;collapsing-tabs&quot;&gt;
+					&lt;div class&#x3D;&quot;tabs-panel &quot; id&#x3D;&quot;panel1c&quot;&gt;&lt;/div&gt;
+					&lt;div class&#x3D;&quot;tabs-panel is-active&quot; id&#x3D;&quot;panel2c&quot;&gt;
+						&lt;h3&gt;A gemstone’s clarity has to do with the number of inclusions that it contains, the size of those inclusions and their position within the gemstone. The fewer, smaller and less conspicuous the inclusions, the better. Importantly, however, inclusions
+							should not always be seen as being “bad” as they are also responsible for giving each &lt;/h3&gt;
+						&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, lectus ut sagittis elementum, magna tellus feugiat libero, id egestas massa velit sit amet nisi. Nullam quam leo, sollicitudin ut mi vel, laoreet ullamcorper ipsum. Sed sagittis
+							vitae est id posuere. Fusce egestas eu nisi quis porta. Nam vel purus eu odio consectetur tristique vitae et neque. Nam eget tellus vulputate, maximus&lt;/p&gt;
+					&lt;/div&gt;
+					&lt;div class&#x3D;&quot;tabs-panel&quot; id&#x3D;&quot;panel3c&quot;&gt;&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;gem-details__image&quot;&gt;
+			&lt;ul class&#x3D;&quot;heritage-section__gems--ul&quot;&gt;
+				&lt;li&gt;
+					&lt;img class&#x3D;&quot;ruby-img&quot; src&#x3D;&quot;/assets/toolkit/images/ruby.png&quot; alt&#x3D;&quot;&quot;&gt;
+					&lt;div class&#x3D;&quot;li-content&quot;&gt;
+						&lt;h2&gt;RUBY&lt;/h2&gt;
+						&lt;p&gt;Rubies have an almost other wordly quality that has beguiled and delighted humanity through the ages. As with all gemstones the colour should be even... throughout&lt;/p&gt;
+					&lt;/div&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="gems">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Gems</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<section class="gems">
+	<div class="gems__container">
+		<div class="heritage-section__gems">
+			<ul class="heritage-section__gems--ul">
+				<li>
+					<img class="ruby-img" src="/assets/toolkit/images/ruby.png" alt="">
+					<h2>RUBY</h2>
+					<div class="li-content">
+						<p>Rubies have an almost other wordly quality that has beguiled and delighted humanity through the ages. As with all gemstones the colour should be even... throughout</p>
+					</div>
+				</li>
+				<li>
+					<img src="/assets/toolkit/images/emerald.png" alt="">
+					<h2 class="emerald-h2">RUBY</h2>
+					<div class="li-content">
+						<p>Rubies have an almost other wordly quality that has beguiled and delighted humanity through the ages. As with all gemstones the colour should be even... throughout</p>
+					</div>
+				</li>
+				<li>
+					<img class="ruby-img" src="/assets/toolkit/images/ruby.png" alt="">
+					<h2>RUBY</h2>
+					<div class="li-content">
+						<p>Rubies have an almost other wordly quality that has beguiled and delighted humanity through the ages. As with all gemstones the colour should be even... throughout</p>
+					</div>
+				</li>
+				<li>
+					<img src="/assets/toolkit/images/emerald.png" alt="">
+					<h2 class="emerald-h2">RUBY</h2>
+					<div class="li-content">
+						<p>Rubies have an almost other wordly quality that has beguiled and delighted humanity through the ages. As with all gemstones the colour should be even... throughout</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class&#x3D;&quot;gems&quot;&gt;
+	&lt;div class&#x3D;&quot;gems__container&quot;&gt;
+		&lt;div class&#x3D;&quot;heritage-section__gems&quot;&gt;
+			&lt;ul class&#x3D;&quot;heritage-section__gems--ul&quot;&gt;
+				&lt;li&gt;
+					&lt;img class&#x3D;&quot;ruby-img&quot; src&#x3D;&quot;/assets/toolkit/images/ruby.png&quot; alt&#x3D;&quot;&quot;&gt;
+					&lt;h2&gt;RUBY&lt;/h2&gt;
+					&lt;div class&#x3D;&quot;li-content&quot;&gt;
+						&lt;p&gt;Rubies have an almost other wordly quality that has beguiled and delighted humanity through the ages. As with all gemstones the colour should be even... throughout&lt;/p&gt;
+					&lt;/div&gt;
+				&lt;/li&gt;
+				&lt;li&gt;
+					&lt;img src&#x3D;&quot;/assets/toolkit/images/emerald.png&quot; alt&#x3D;&quot;&quot;&gt;
+					&lt;h2 class&#x3D;&quot;emerald-h2&quot;&gt;RUBY&lt;/h2&gt;
+					&lt;div class&#x3D;&quot;li-content&quot;&gt;
+						&lt;p&gt;Rubies have an almost other wordly quality that has beguiled and delighted humanity through the ages. As with all gemstones the colour should be even... throughout&lt;/p&gt;
+					&lt;/div&gt;
+				&lt;/li&gt;
+				&lt;li&gt;
+					&lt;img class&#x3D;&quot;ruby-img&quot; src&#x3D;&quot;/assets/toolkit/images/ruby.png&quot; alt&#x3D;&quot;&quot;&gt;
+					&lt;h2&gt;RUBY&lt;/h2&gt;
+					&lt;div class&#x3D;&quot;li-content&quot;&gt;
+						&lt;p&gt;Rubies have an almost other wordly quality that has beguiled and delighted humanity through the ages. As with all gemstones the colour should be even... throughout&lt;/p&gt;
+					&lt;/div&gt;
+				&lt;/li&gt;
+				&lt;li&gt;
+					&lt;img src&#x3D;&quot;/assets/toolkit/images/emerald.png&quot; alt&#x3D;&quot;&quot;&gt;
+					&lt;h2 class&#x3D;&quot;emerald-h2&quot;&gt;RUBY&lt;/h2&gt;
+					&lt;div class&#x3D;&quot;li-content&quot;&gt;
+						&lt;p&gt;Rubies have an almost other wordly quality that has beguiled and delighted humanity through the ages. As with all gemstones the colour should be even... throughout&lt;/p&gt;
+					&lt;/div&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="gemstones">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Gemstones</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<section class="gemstones">
+	<div class="gemstones__container">
+		<div class="gemstones__subtitle">EXPLORE OTHER</div>
+		<div class="gemstones__title">GEMSTONES</div>
+
+		<div class="gemstones__box">
+			<div class="gemstones__box--image">
+				<img src="../../assets/toolkit/images/ruby.png" alt="">
+			</div>
+			<h2 class="gemstones__box--name">RUBY</h2>
+			<a href="#" class="gemstones__box--more">learn more</a>
+		</div>
+
+		<div class="gemstones__box emerald">
+			<div class="gemstones__box--image">
+				<img src="../../assets/toolkit/images/emerald.png" alt="">
+			</div>
+			<h2 class="gemstones__box--name">EMERald</h2>
+			<a href="#" class="gemstones__box--more">learn more</a>
+		</div>
+
+		<div class="gemstones__box">
+			<div class="gemstones__box--image">
+				<img src="../../assets/toolkit/images/ruby.png" alt="">
+			</div>
+			<h2 class="gemstones__box--name">RUBY</h2>
+			<a href="#" class="gemstones__box--more">learn more</a>
+		</div>
+	</div>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class&#x3D;&quot;gemstones&quot;&gt;
+	&lt;div class&#x3D;&quot;gemstones__container&quot;&gt;
+		&lt;div class&#x3D;&quot;gemstones__subtitle&quot;&gt;EXPLORE OTHER&lt;/div&gt;
+		&lt;div class&#x3D;&quot;gemstones__title&quot;&gt;GEMSTONES&lt;/div&gt;
+
+		&lt;div class&#x3D;&quot;gemstones__box&quot;&gt;
+			&lt;div class&#x3D;&quot;gemstones__box--image&quot;&gt;
+				&lt;img src&#x3D;&quot;../../assets/toolkit/images/ruby.png&quot; alt&#x3D;&quot;&quot;&gt;
+			&lt;/div&gt;
+			&lt;h2 class&#x3D;&quot;gemstones__box--name&quot;&gt;RUBY&lt;/h2&gt;
+			&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;gemstones__box--more&quot;&gt;learn more&lt;/a&gt;
+		&lt;/div&gt;
+
+		&lt;div class&#x3D;&quot;gemstones__box emerald&quot;&gt;
+			&lt;div class&#x3D;&quot;gemstones__box--image&quot;&gt;
+				&lt;img src&#x3D;&quot;../../assets/toolkit/images/emerald.png&quot; alt&#x3D;&quot;&quot;&gt;
+			&lt;/div&gt;
+			&lt;h2 class&#x3D;&quot;gemstones__box--name&quot;&gt;EMERald&lt;/h2&gt;
+			&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;gemstones__box--more&quot;&gt;learn more&lt;/a&gt;
+		&lt;/div&gt;
+
+		&lt;div class&#x3D;&quot;gemstones__box&quot;&gt;
+			&lt;div class&#x3D;&quot;gemstones__box--image&quot;&gt;
+				&lt;img src&#x3D;&quot;../../assets/toolkit/images/ruby.png&quot; alt&#x3D;&quot;&quot;&gt;
+			&lt;/div&gt;
+			&lt;h2 class&#x3D;&quot;gemstones__box--name&quot;&gt;RUBY&lt;/h2&gt;
+			&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;gemstones__box--more&quot;&gt;learn more&lt;/a&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="header">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Header</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<header class="header ">
+	<div class="header__top">
+		<div class="header__brand">
+			<div class="header__logo">
+				<div class="logo ">
+					<a href="home.html">
+						<div class="logo__img"></div>
+						<h3>gemlegacy</h3>
+						<h4>gem hub</h4>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="header__nav">
+			<ul class="nav__ul">
+				<li><a href="about.html">about us</a></li>
+				<li><a href="heritage.html">heritage</a></li>
+				<li><a href="news.html">news</a></li>
+				<li><a href="contact.html">contact</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="mobile-nav">
+		<div class="header__bottom-logo">
+			<div class="logo ">
+				<a href="home.html">
+					<div class="logo__img"></div>
+					<h3>gemlegacy</h3>
+					<h4>gem hub</h4>
+				</a>
+			</div>
+		</div>
+		<a class="mobile-nav-trigger" href="#">
+			<div class='burger'></div>
+		</a>
+		<ul>
+			<li><a href="#">about us</a></li>
+			<li><a href="#">heritage</a></li>
+			<li><a href="#">news</a></li>
+			<li><a href="#">contact</a></li>
+		</ul>
+	</div>
+</header>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;header class&#x3D;&quot;header &quot;&gt;
+	&lt;div class&#x3D;&quot;header__top&quot;&gt;
+		&lt;div class&#x3D;&quot;header__brand&quot;&gt;
+			&lt;div class&#x3D;&quot;header__logo&quot;&gt;
+				&lt;div class&#x3D;&quot;logo &quot;&gt;
+					&lt;a href&#x3D;&quot;home.html&quot;&gt;
+						&lt;div class&#x3D;&quot;logo__img&quot;&gt;&lt;/div&gt;
+						&lt;h3&gt;gemlegacy&lt;/h3&gt;
+						&lt;h4&gt;gem hub&lt;/h4&gt;
+					&lt;/a&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;header__nav&quot;&gt;
+			&lt;ul class&#x3D;&quot;nav__ul&quot;&gt;
+				&lt;li&gt;&lt;a href&#x3D;&quot;about.html&quot;&gt;about us&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href&#x3D;&quot;heritage.html&quot;&gt;heritage&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href&#x3D;&quot;news.html&quot;&gt;news&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href&#x3D;&quot;contact.html&quot;&gt;contact&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;div class&#x3D;&quot;mobile-nav&quot;&gt;
+		&lt;div class&#x3D;&quot;header__bottom-logo&quot;&gt;
+			&lt;div class&#x3D;&quot;logo &quot;&gt;
+				&lt;a href&#x3D;&quot;home.html&quot;&gt;
+					&lt;div class&#x3D;&quot;logo__img&quot;&gt;&lt;/div&gt;
+					&lt;h3&gt;gemlegacy&lt;/h3&gt;
+					&lt;h4&gt;gem hub&lt;/h4&gt;
+				&lt;/a&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;a class&#x3D;&quot;mobile-nav-trigger&quot; href&#x3D;&quot;#&quot;&gt;
+			&lt;div class&#x3D;&#x27;burger&#x27;&gt;&lt;/div&gt;
+		&lt;/a&gt;
+		&lt;ul&gt;
+			&lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;about us&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;heritage&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;news&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;contact&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+&lt;/header&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="heritage-section">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Heritage Section</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<div class="heritage-section">
+	<div class="heritage-section__content">
+		<div class="about-box__content  about-box--dark ">
+			<h5 class="about-box__title">ABOUT US</h5>
+			<h3 class="about-box__subtitle">
+				Behind every gem is a <br> fascinating story.
+			</h3>
+			<p class="about-box__text">
+				Our heritage is composed of more than four generations of <br> ethical experience in the gemstone arena. Our family owned <br> trade is renowned for its exclusive collection, fine <br> craftsmanship, exceptional dedication to our customers and <br>unparalleled
+				expertise.
+			</p>
+			<a href="about.html" class="about-box__href">READ MORE</a>
+		</div>
+	</div>
+	<div class="heritage-section__gems">
+		<ul class="heritage-section__gems--ul">
+			<li>
+				<img class="ruby-img" src="/assets/toolkit/images/ruby.png" alt="">
+				<div class="li-content">
+					<h2>RUBY</h2>
+					<p>Rubies have an almost other wordly quality that has beguiled and delighted humanity through the ages. As with all gemstones the colour should be even... throughout</p>
+				</div>
+			</li>
+			<li>
+				<img src="/assets/toolkit/images/emerald.png" alt="">
+				<div class="li-content">
+					<h2>RUBY</h2>
+					<p>Rubies have an almost other wordly quality that has beguiled and delighted humanity through the ages. As with all gemstones the colour should be even... throughout</p>
+				</div>
+			</li>
+			<li>
+				<img class="ruby-img" src="/assets/toolkit/images/ruby.png" alt="">
+				<div class="li-content">
+					<h2>RUBY</h2>
+					<p>Rubies have an almost other wordly quality that has beguiled and delighted humanity through the ages. As with all gemstones the colour should be even... throughout</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;heritage-section&quot;&gt;
+	&lt;div class&#x3D;&quot;heritage-section__content&quot;&gt;
+		&lt;div class&#x3D;&quot;about-box__content  about-box--dark &quot;&gt;
+			&lt;h5 class&#x3D;&quot;about-box__title&quot;&gt;ABOUT US&lt;/h5&gt;
+			&lt;h3 class&#x3D;&quot;about-box__subtitle&quot;&gt;
+				Behind every gem is a &lt;br&gt; fascinating story.
+			&lt;/h3&gt;
+			&lt;p class&#x3D;&quot;about-box__text&quot;&gt;
+				Our heritage is composed of more than four generations of &lt;br&gt; ethical experience in the gemstone arena. Our family owned &lt;br&gt; trade is renowned for its exclusive collection, fine &lt;br&gt; craftsmanship, exceptional dedication to our customers and &lt;br&gt;unparalleled
+				expertise.
+			&lt;/p&gt;
+			&lt;a href&#x3D;&quot;about.html&quot; class&#x3D;&quot;about-box__href&quot;&gt;READ MORE&lt;/a&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;heritage-section__gems&quot;&gt;
+		&lt;ul class&#x3D;&quot;heritage-section__gems--ul&quot;&gt;
+			&lt;li&gt;
+				&lt;img class&#x3D;&quot;ruby-img&quot; src&#x3D;&quot;/assets/toolkit/images/ruby.png&quot; alt&#x3D;&quot;&quot;&gt;
+				&lt;div class&#x3D;&quot;li-content&quot;&gt;
+					&lt;h2&gt;RUBY&lt;/h2&gt;
+					&lt;p&gt;Rubies have an almost other wordly quality that has beguiled and delighted humanity through the ages. As with all gemstones the colour should be even... throughout&lt;/p&gt;
+				&lt;/div&gt;
+			&lt;/li&gt;
+			&lt;li&gt;
+				&lt;img src&#x3D;&quot;/assets/toolkit/images/emerald.png&quot; alt&#x3D;&quot;&quot;&gt;
+				&lt;div class&#x3D;&quot;li-content&quot;&gt;
+					&lt;h2&gt;RUBY&lt;/h2&gt;
+					&lt;p&gt;Rubies have an almost other wordly quality that has beguiled and delighted humanity through the ages. As with all gemstones the colour should be even... throughout&lt;/p&gt;
+				&lt;/div&gt;
+			&lt;/li&gt;
+			&lt;li&gt;
+				&lt;img class&#x3D;&quot;ruby-img&quot; src&#x3D;&quot;/assets/toolkit/images/ruby.png&quot; alt&#x3D;&quot;&quot;&gt;
+				&lt;div class&#x3D;&quot;li-content&quot;&gt;
+					&lt;h2&gt;RUBY&lt;/h2&gt;
+					&lt;p&gt;Rubies have an almost other wordly quality that has beguiled and delighted humanity through the ages. As with all gemstones the colour should be even... throughout&lt;/p&gt;
+				&lt;/div&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="hero">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Hero</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<div class="hero">
+	<div class="hero__topshadow"></div>
+	<div class="hero__content">
+		<h1>gemslegacy</h1>
+		<h4>We are the proud custodians <br>of the timeless trade of gemstones.</h4>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;hero&quot;&gt;
+	&lt;div class&#x3D;&quot;hero__topshadow&quot;&gt;&lt;/div&gt;
+	&lt;div class&#x3D;&quot;hero__content&quot;&gt;
+		&lt;h1&gt;gemslegacy&lt;/h1&gt;
+		&lt;h4&gt;We are the proud custodians &lt;br&gt;of the timeless trade of gemstones.&lt;/h4&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="introduction">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Introduction</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<section class="introduction">
+	<div class="introduction__container">
+		<div class="introduction__image">
+			<img src="/assets/toolkit/images/ruby-tra.png" alt="">
+		</div>
+		<div class="introduction__info">
+			<h4 class="introduction__info--subtitle">RUBY GEMSTONE</h4>
+			<h2 class="introduction__info--title">INTRODUCTION</h2>
+			<p class="introduction__info--text">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, lectus ut sagittis elementum, magna tellus feugiat libero, id egestas massa velit sit amet nisi. Nullam quam leo, sollicitudin ut mi vel, laoreet ullamcorper ipsum. Sed sagittis vitae
+				est id posuere. Fusce egestas eu nisi quis porta. Nam vel purus eu odio consectetur tristique vitae et neque. Nam eget tellus vulputate
+			</p>
+		</div>
+	</div>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class&#x3D;&quot;introduction&quot;&gt;
+	&lt;div class&#x3D;&quot;introduction__container&quot;&gt;
+		&lt;div class&#x3D;&quot;introduction__image&quot;&gt;
+			&lt;img src&#x3D;&quot;/assets/toolkit/images/ruby-tra.png&quot; alt&#x3D;&quot;&quot;&gt;
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;introduction__info&quot;&gt;
+			&lt;h4 class&#x3D;&quot;introduction__info--subtitle&quot;&gt;RUBY GEMSTONE&lt;/h4&gt;
+			&lt;h2 class&#x3D;&quot;introduction__info--title&quot;&gt;INTRODUCTION&lt;/h2&gt;
+			&lt;p class&#x3D;&quot;introduction__info--text&quot;&gt;
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, lectus ut sagittis elementum, magna tellus feugiat libero, id egestas massa velit sit amet nisi. Nullam quam leo, sollicitudin ut mi vel, laoreet ullamcorper ipsum. Sed sagittis vitae
+				est id posuere. Fusce egestas eu nisi quis porta. Nam vel purus eu odio consectetur tristique vitae et neque. Nam eget tellus vulputate
+			&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="mission">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Mission</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<div class="mission">
+	<div class="mission__content">
+		<div class="mission__box">
+			<h2 class="mission__box--title">GEMSLEGACYS' MISSION</h2>
+			<p class="mission__box--subtitle">OUR MISSION</p>
+			<h3 class="mission__box--text">To innovate and inspire through sustainable exploration, mining, supply and promotion of coloured gemstones.</h3>
+		</div>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;mission&quot;&gt;
+	&lt;div class&#x3D;&quot;mission__content&quot;&gt;
+		&lt;div class&#x3D;&quot;mission__box&quot;&gt;
+			&lt;h2 class&#x3D;&quot;mission__box--title&quot;&gt;GEMSLEGACYS&#x27; MISSION&lt;/h2&gt;
+			&lt;p class&#x3D;&quot;mission__box--subtitle&quot;&gt;OUR MISSION&lt;/p&gt;
+			&lt;h3 class&#x3D;&quot;mission__box--text&quot;&gt;To innovate and inspire through sustainable exploration, mining, supply and promotion of coloured gemstones.&lt;/h3&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="news">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">News</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<div class="news">
+	<div class="news__container">
+		<h3 class="news__title">News</h3>
+		<div class="news__box">
+			<div class="news__box--img">
+				<img src="../../assets/toolkit/images/box1.png" alt="" class="news__box--image">
+			</div>
+			<span class="news__box--date">23 MAY 2017</span>
+			<h4 class="news__box--title">The most expensive gems ever and other records</h4>
+			<p class="news__box--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec risus lectus. Donec in magna in nulla efficitur lobortis. Nulla volutpat non turpis vitae gravida. Phasellus facilisis mollis massa et ultricies. Nulla vestibulum hendrerit erat,
+				eu gravida sapien facilisis nec...</p>
+			<a href="news-open.html" class="news__box--href">read more</a>
+		</div>
+
+		<div class="news__box">
+			<div class="news__box--img">
+				<img src="../../assets/toolkit/images/box2.png" alt="" class="news__box--image">
+			</div>
+			<span class="news__box--date">23 MAY 2017</span>
+			<h4 class="news__box--title">The most expensive gems ever and other records</h4>
+			<p class="news__box--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec risus lectus. Donec in magna in nulla efficitur lobortis. Nulla volutpat non turpis vitae gravida. Phasellus facilisis mollis massa et ultricies. Nulla vestibulum hendrerit erat,
+				eu gravida sapien facilisis nec...</p>
+			<a href="news-open.html" class="news__box--href">read more</a>
+		</div>
+
+		<div class="news__box">
+			<div class="news__box--img">
+				<img src="../../assets/toolkit/images/box2.png" alt="" class="news__box--image">
+			</div>
+			<span class="news__box--date">23 MAY 2017</span>
+			<h4 class="news__box--title">The most expensive gems ever and other records</h4>
+			<p class="news__box--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec risus lectus. Donec in magna in nulla efficitur lobortis. Nulla volutpat non turpis vitae gravida. Phasellus facilisis mollis massa et ultricies. Nulla vestibulum hendrerit erat,
+				eu gravida sapien facilisis nec...</p>
+			<a href="news-open.html" class="news__box--href">read more</a>
+		</div>
+
+		<div class="news__box">
+			<div class="news__box--img">
+				<img src="../../assets/toolkit/images/box1.png" alt="" class="news__box--image">
+			</div>
+			<span class="news__box--date">23 MAY 2017</span>
+			<h4 class="news__box--title">The most expensive gems ever and other records</h4>
+			<p class="news__box--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec risus lectus. Donec in magna in nulla efficitur lobortis. Nulla volutpat non turpis vitae gravida. Phasellus facilisis mollis massa et ultricies. Nulla vestibulum hendrerit erat,
+				eu gravida sapien facilisis nec...</p>
+			<a href="news-open.html" class="news__box--href">read more</a>
+		</div>
+		<a class="news__view--more"><span><i class="fa fa-plus" aria-hidden="true"></i></span>VIEW ALL NEWS</a>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;news&quot;&gt;
+	&lt;div class&#x3D;&quot;news__container&quot;&gt;
+		&lt;h3 class&#x3D;&quot;news__title&quot;&gt;News&lt;/h3&gt;
+		&lt;div class&#x3D;&quot;news__box&quot;&gt;
+			&lt;div class&#x3D;&quot;news__box--img&quot;&gt;
+				&lt;img src&#x3D;&quot;../../assets/toolkit/images/box1.png&quot; alt&#x3D;&quot;&quot; class&#x3D;&quot;news__box--image&quot;&gt;
+			&lt;/div&gt;
+			&lt;span class&#x3D;&quot;news__box--date&quot;&gt;23 MAY 2017&lt;/span&gt;
+			&lt;h4 class&#x3D;&quot;news__box--title&quot;&gt;The most expensive gems ever and other records&lt;/h4&gt;
+			&lt;p class&#x3D;&quot;news__box--text&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec risus lectus. Donec in magna in nulla efficitur lobortis. Nulla volutpat non turpis vitae gravida. Phasellus facilisis mollis massa et ultricies. Nulla vestibulum hendrerit erat,
+				eu gravida sapien facilisis nec...&lt;/p&gt;
+			&lt;a href&#x3D;&quot;news-open.html&quot; class&#x3D;&quot;news__box--href&quot;&gt;read more&lt;/a&gt;
+		&lt;/div&gt;
+
+		&lt;div class&#x3D;&quot;news__box&quot;&gt;
+			&lt;div class&#x3D;&quot;news__box--img&quot;&gt;
+				&lt;img src&#x3D;&quot;../../assets/toolkit/images/box2.png&quot; alt&#x3D;&quot;&quot; class&#x3D;&quot;news__box--image&quot;&gt;
+			&lt;/div&gt;
+			&lt;span class&#x3D;&quot;news__box--date&quot;&gt;23 MAY 2017&lt;/span&gt;
+			&lt;h4 class&#x3D;&quot;news__box--title&quot;&gt;The most expensive gems ever and other records&lt;/h4&gt;
+			&lt;p class&#x3D;&quot;news__box--text&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec risus lectus. Donec in magna in nulla efficitur lobortis. Nulla volutpat non turpis vitae gravida. Phasellus facilisis mollis massa et ultricies. Nulla vestibulum hendrerit erat,
+				eu gravida sapien facilisis nec...&lt;/p&gt;
+			&lt;a href&#x3D;&quot;news-open.html&quot; class&#x3D;&quot;news__box--href&quot;&gt;read more&lt;/a&gt;
+		&lt;/div&gt;
+
+		&lt;div class&#x3D;&quot;news__box&quot;&gt;
+			&lt;div class&#x3D;&quot;news__box--img&quot;&gt;
+				&lt;img src&#x3D;&quot;../../assets/toolkit/images/box2.png&quot; alt&#x3D;&quot;&quot; class&#x3D;&quot;news__box--image&quot;&gt;
+			&lt;/div&gt;
+			&lt;span class&#x3D;&quot;news__box--date&quot;&gt;23 MAY 2017&lt;/span&gt;
+			&lt;h4 class&#x3D;&quot;news__box--title&quot;&gt;The most expensive gems ever and other records&lt;/h4&gt;
+			&lt;p class&#x3D;&quot;news__box--text&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec risus lectus. Donec in magna in nulla efficitur lobortis. Nulla volutpat non turpis vitae gravida. Phasellus facilisis mollis massa et ultricies. Nulla vestibulum hendrerit erat,
+				eu gravida sapien facilisis nec...&lt;/p&gt;
+			&lt;a href&#x3D;&quot;news-open.html&quot; class&#x3D;&quot;news__box--href&quot;&gt;read more&lt;/a&gt;
+		&lt;/div&gt;
+
+		&lt;div class&#x3D;&quot;news__box&quot;&gt;
+			&lt;div class&#x3D;&quot;news__box--img&quot;&gt;
+				&lt;img src&#x3D;&quot;../../assets/toolkit/images/box1.png&quot; alt&#x3D;&quot;&quot; class&#x3D;&quot;news__box--image&quot;&gt;
+			&lt;/div&gt;
+			&lt;span class&#x3D;&quot;news__box--date&quot;&gt;23 MAY 2017&lt;/span&gt;
+			&lt;h4 class&#x3D;&quot;news__box--title&quot;&gt;The most expensive gems ever and other records&lt;/h4&gt;
+			&lt;p class&#x3D;&quot;news__box--text&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec risus lectus. Donec in magna in nulla efficitur lobortis. Nulla volutpat non turpis vitae gravida. Phasellus facilisis mollis massa et ultricies. Nulla vestibulum hendrerit erat,
+				eu gravida sapien facilisis nec...&lt;/p&gt;
+			&lt;a href&#x3D;&quot;news-open.html&quot; class&#x3D;&quot;news__box--href&quot;&gt;read more&lt;/a&gt;
+		&lt;/div&gt;
+		&lt;a class&#x3D;&quot;news__view--more&quot;&gt;&lt;span&gt;&lt;i class&#x3D;&quot;fa fa-plus&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;VIEW ALL NEWS&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="office">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Office</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<section class="office">
+	<div class="office__container">
+		<div class="office__map">
+			<img src="/assets/toolkit/images/map.png" alt="">
+		</div>
+		<div class="office__info">
+			<h1 class="office__info--title">REGISTERED <br> OFFICE
+			</h1>
+			<ul class="office__info--address">
+				<li>GEMSTONE GEM HUB</li>
+				<li>Address: <br> Doha (Qatar)</li>
+				<li>EMAIL: <br> Info@heritage.com</li>
+			</ul>
+			<ul class="office__info--tel">
+				<li>G</li>
+				<li>TEL: <br> +974 5054 6452</li>
+				<li>FAX: <br> +974 5054 6452</li>
+			</ul>
+		</div>
+	</div>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class&#x3D;&quot;office&quot;&gt;
+	&lt;div class&#x3D;&quot;office__container&quot;&gt;
+		&lt;div class&#x3D;&quot;office__map&quot;&gt;
+			&lt;img src&#x3D;&quot;/assets/toolkit/images/map.png&quot; alt&#x3D;&quot;&quot;&gt;
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;office__info&quot;&gt;
+			&lt;h1 class&#x3D;&quot;office__info--title&quot;&gt;REGISTERED &lt;br&gt; OFFICE
+			&lt;/h1&gt;
+			&lt;ul class&#x3D;&quot;office__info--address&quot;&gt;
+				&lt;li&gt;GEMSTONE GEM HUB&lt;/li&gt;
+				&lt;li&gt;Address: &lt;br&gt; Doha (Qatar)&lt;/li&gt;
+				&lt;li&gt;EMAIL: &lt;br&gt; Info@heritage.com&lt;/li&gt;
+			&lt;/ul&gt;
+			&lt;ul class&#x3D;&quot;office__info--tel&quot;&gt;
+				&lt;li&gt;G&lt;/li&gt;
+				&lt;li&gt;TEL: &lt;br&gt; +974 5054 6452&lt;/li&gt;
+				&lt;li&gt;FAX: &lt;br&gt; +974 5054 6452&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="our-team">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Our Team</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<section class="our-team">
+	<div class="our-team__container">
+		<h3 class="our-team__container--subtitle">about us</h3>
+		<h2 class="our-team__container--title">Our team</h2>
+
+		<div class="our-team__box">
+			<div class="our-team__box--image">
+				<img src="../../assets/toolkit/images/team1.png" alt="" class="our-team__box--img">
+			</div>
+			<h2 class="our-team__box--name">Adam smith</h2>
+			<h3 class="our-team__box--position">ceo / found</h3>
+		</div>
+
+		<div class="our-team__box">
+			<div class="our-team__box--image">
+				<img src="../../assets/toolkit/images/team2.png" alt="" class="our-team__box--img">
+			</div>
+			<h2 class="our-team__box--name">CALVIN SMOTHERS</h2>
+			<h3 class="our-team__box--position">EXECUTIVE ASSITANT</h3>
+		</div>
+
+		<div class="our-team__box">
+			<div class="our-team__box--image">
+				<img src="../../assets/toolkit/images/team3.png" alt="" class="our-team__box--img">
+			</div>
+			<h2 class="our-team__box--name">MATT NORTH</h2>
+			<h3 class="our-team__box--position">DESIGNER</h3>
+		</div>
+	</div>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class&#x3D;&quot;our-team&quot;&gt;
+	&lt;div class&#x3D;&quot;our-team__container&quot;&gt;
+		&lt;h3 class&#x3D;&quot;our-team__container--subtitle&quot;&gt;about us&lt;/h3&gt;
+		&lt;h2 class&#x3D;&quot;our-team__container--title&quot;&gt;Our team&lt;/h2&gt;
+
+		&lt;div class&#x3D;&quot;our-team__box&quot;&gt;
+			&lt;div class&#x3D;&quot;our-team__box--image&quot;&gt;
+				&lt;img src&#x3D;&quot;../../assets/toolkit/images/team1.png&quot; alt&#x3D;&quot;&quot; class&#x3D;&quot;our-team__box--img&quot;&gt;
+			&lt;/div&gt;
+			&lt;h2 class&#x3D;&quot;our-team__box--name&quot;&gt;Adam smith&lt;/h2&gt;
+			&lt;h3 class&#x3D;&quot;our-team__box--position&quot;&gt;ceo / found&lt;/h3&gt;
+		&lt;/div&gt;
+
+		&lt;div class&#x3D;&quot;our-team__box&quot;&gt;
+			&lt;div class&#x3D;&quot;our-team__box--image&quot;&gt;
+				&lt;img src&#x3D;&quot;../../assets/toolkit/images/team2.png&quot; alt&#x3D;&quot;&quot; class&#x3D;&quot;our-team__box--img&quot;&gt;
+			&lt;/div&gt;
+			&lt;h2 class&#x3D;&quot;our-team__box--name&quot;&gt;CALVIN SMOTHERS&lt;/h2&gt;
+			&lt;h3 class&#x3D;&quot;our-team__box--position&quot;&gt;EXECUTIVE ASSITANT&lt;/h3&gt;
+		&lt;/div&gt;
+
+		&lt;div class&#x3D;&quot;our-team__box&quot;&gt;
+			&lt;div class&#x3D;&quot;our-team__box--image&quot;&gt;
+				&lt;img src&#x3D;&quot;../../assets/toolkit/images/team3.png&quot; alt&#x3D;&quot;&quot; class&#x3D;&quot;our-team__box--img&quot;&gt;
+			&lt;/div&gt;
+			&lt;h2 class&#x3D;&quot;our-team__box--name&quot;&gt;MATT NORTH&lt;/h2&gt;
+			&lt;h3 class&#x3D;&quot;our-team__box--position&quot;&gt;DESIGNER&lt;/h3&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="presentation">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Presentation</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<div class="presentation">
+	<div class="presentation__container">
+		<div class="presentation__left">
+			<div class="presentation__left--title">Praese sollicitudin sapien sit amet neque bibendum elementum.</div>
+			<div class="presentation__left--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec risus lectus. Donec in magna in nulla efficitur lobortis. Nulla volutpat non turpis vitae gravida. Phasellus facilisis mollis massa et ultricies.
+				<br> <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec risus lectus. Donec in magna in nulla efficitur lobortis. Nulla volutpat non turpis vitae gravida. Phasellus facilisis mollis massa et ultricies.Lorem ipsum dolor sit amet,
+				consectetur adipiscing elit. Integer nec risus lectus. Donec in magna in nulla efficitur lobortis. Nulla volutpat non turpis vitae</div>
+		</div>
+		<div class="presentation__right">
+			<div class="presentation__right--text">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec risus lectus. Donec in magna in nulla efficitur lobortis. Nulla volutpat non turpis vitae gravida. Phasellus facilisis mollis massa et ultricies.Lorem ipsum dolor sit amet, consectetur
+				adipiscing elit. Integer nec risus lectus. Donec in magna in nulla efficitur lobortis. Nulla volutpat
+				<br><br><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec risus lectus. Donec in magna in nulla efficitur lobortis. </div>
+		</div>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;presentation&quot;&gt;
+	&lt;div class&#x3D;&quot;presentation__container&quot;&gt;
+		&lt;div class&#x3D;&quot;presentation__left&quot;&gt;
+			&lt;div class&#x3D;&quot;presentation__left--title&quot;&gt;Praese sollicitudin sapien sit amet neque bibendum elementum.&lt;/div&gt;
+			&lt;div class&#x3D;&quot;presentation__left--text&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec risus lectus. Donec in magna in nulla efficitur lobortis. Nulla volutpat non turpis vitae gravida. Phasellus facilisis mollis massa et ultricies.
+				&lt;br&gt; &lt;br&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec risus lectus. Donec in magna in nulla efficitur lobortis. Nulla volutpat non turpis vitae gravida. Phasellus facilisis mollis massa et ultricies.Lorem ipsum dolor sit amet,
+				consectetur adipiscing elit. Integer nec risus lectus. Donec in magna in nulla efficitur lobortis. Nulla volutpat non turpis vitae&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;presentation__right&quot;&gt;
+			&lt;div class&#x3D;&quot;presentation__right--text&quot;&gt;
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec risus lectus. Donec in magna in nulla efficitur lobortis. Nulla volutpat non turpis vitae gravida. Phasellus facilisis mollis massa et ultricies.Lorem ipsum dolor sit amet, consectetur
+				adipiscing elit. Integer nec risus lectus. Donec in magna in nulla efficitur lobortis. Nulla volutpat
+				&lt;br&gt;&lt;br&gt;&lt;br&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec risus lectus. Donec in magna in nulla efficitur lobortis. &lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="vision">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Vision</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<section class="vision">
+	<div class="vision__container">
+		<div class="vision__image">
+			<img src="../../assets/toolkit/images/vision.png" alt="" class="vision__image--img">
+		</div>
+		<div class="vision__info">
+			<h3 class="vision__info--title">GEMstone’s VISION</h3>
+			<p class="vision__info--subtitle">our vision</p>
+			<h4 class="vision__info--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec risus lectus. Donec in magna in nulla efficitur lobortis. Nulla volutpat non turpis vitae gravida. Phasellus facilisis mollis massa et ultricies.Lorem ipsum dolor sit amet, consectetur
+				adipiscing elit. Integer nec risus lectus. Donec in magna in nulla efficitur lobortis. Nulla volutpat non turpis vitae gravida. Phasellus facilisis mollis massa et ultricies.</h4>
+		</div>
+	</div>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class&#x3D;&quot;vision&quot;&gt;
+	&lt;div class&#x3D;&quot;vision__container&quot;&gt;
+		&lt;div class&#x3D;&quot;vision__image&quot;&gt;
+			&lt;img src&#x3D;&quot;../../assets/toolkit/images/vision.png&quot; alt&#x3D;&quot;&quot; class&#x3D;&quot;vision__image--img&quot;&gt;
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;vision__info&quot;&gt;
+			&lt;h3 class&#x3D;&quot;vision__info--title&quot;&gt;GEMstone’s VISION&lt;/h3&gt;
+			&lt;p class&#x3D;&quot;vision__info--subtitle&quot;&gt;our vision&lt;/p&gt;
+			&lt;h4 class&#x3D;&quot;vision__info--text&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec risus lectus. Donec in magna in nulla efficitur lobortis. Nulla volutpat non turpis vitae gravida. Phasellus facilisis mollis massa et ultricies.Lorem ipsum dolor sit amet, consectetur
+				adipiscing elit. Integer nec risus lectus. Donec in magna in nulla efficitur lobortis. Nulla volutpat non turpis vitae gravida. Phasellus facilisis mollis massa et ultricies.&lt;/h4&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+	
+	<script src="/assets/toolkit/scripts/jquery.min.js"></script>
+
+		</div>
+	<script src="/assets/fabricator/scripts/f.js"></script>
+
+	<!-- toolkit scripts -->
+	<script src="/assets/toolkit/scripts/toolkit.js"></script>
+	<!-- /toolkit scripts -->
+
+</body>
+</html>

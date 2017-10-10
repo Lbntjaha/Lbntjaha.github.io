@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Overview | Fabricator</title>
+	<title></title>
 
 	<link rel="stylesheet" href="/assets/fabricator/styles/f.css">
 
@@ -226,58 +226,181 @@
 
 
 	
-<h1>Overview</h1>
-
-<p>This UI toolkit is a highly-modular design system for rapid web page development. It contains different materials that can be assembled into more complex page layouts.</p>
-
-<p>This guide contains real working examples, code snippets, documentation, and style guidelines.</p>
-
-<h2>Usage</h2>
-
-<p>Start by adding the following files to your page:</p>
-
-<pre class="language-markup"><code class="language-markup">&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/toolkit/styles/toolkit.css&quot;&gt;</code></pre>
-
-<pre class="language-markup"><code class="language-markup">&lt;script src=&quot;assets/toolkit/scripts/toolkit.js&quot;&gt;&lt;/script&gt;</code></pre>
+<h1 data-f-toggle="labels">Atoms</h1>
 
 
-<h2>Color</h2>
+<div class="f-item-group" id="button">
 
-	<div class="f-color-chips">
-		<div class="f-color-chip">
-			<div class="f-color-chip__name">Dark</div>
-			<div class="f-color-chip__color">rgb(30, 30, 30)</div>
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Button</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#f-icon-notes" />
+				</svg>
+			</span>
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
 		</div>
-		<div class="f-color-chip">
-			<div class="f-color-chip__name">Light</div>
-			<div class="f-color-chip__color">rgb(242, 242, 242)</div>
+	</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>These are notes associated with this <code>button</code> component.</p>
+
+</div>
+<div class="f-item-preview">
+	<button class="button">Submit</button>
+
+<button class="button" type="button" data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Fancy word for a beetle." data-position="right" data-alignment="top">
+  <span class="icon icon-cart"></span>Right Top
+</button>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;button class&#x3D;&quot;button&quot;&gt;Submit&lt;/button&gt;
+
+&lt;button class&#x3D;&quot;button&quot; type&#x3D;&quot;button&quot; data-tooltip aria-haspopup&#x3D;&quot;true&quot; class&#x3D;&quot;has-tip&quot; data-disable-hover&#x3D;&quot;false&quot; tabindex&#x3D;&quot;1&quot; title&#x3D;&quot;Fancy word for a beetle.&quot; data-position&#x3D;&quot;right&quot; data-alignment&#x3D;&quot;top&quot;&gt;
+  &lt;span class&#x3D;&quot;icon icon-cart&quot;&gt;&lt;/span&gt;Right Top
+&lt;/button&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="logo">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Logo</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
 		</div>
 	</div>
-	<div class="f-color-chips">
-		<div class="f-color-chip">
-			<div class="f-color-chip__name">Red</div>
-			<div class="f-color-chip__color">rgb(201, 55, 6)</div>
-		</div>
-		<div class="f-color-chip">
-			<div class="f-color-chip__name">Yellow</div>
-			<div class="f-color-chip__color">rgb(252, 207, 80)</div>
-		</div>
-		<div class="f-color-chip">
-			<div class="f-color-chip__name">Blue</div>
-			<div class="f-color-chip__color">rgb(39, 102, 143)</div>
+<div class="f-item-preview">
+	<div class="logo ">
+	<a href="home.html">
+		<div class="logo__img"></div>
+		<h3>gemlegacy</h3>
+		<h4>gem hub</h4>
+	</a>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;logo &quot;&gt;
+	&lt;a href&#x3D;&quot;home.html&quot;&gt;
+		&lt;div class&#x3D;&quot;logo__img&quot;&gt;&lt;/div&gt;
+		&lt;h3&gt;gemlegacy&lt;/h3&gt;
+		&lt;h4&gt;gem hub&lt;/h4&gt;
+	&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="table">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Table</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
 		</div>
 	</div>
+<div class="f-item-preview">
+	<table>
+	<thead>
+		<tr>
+			<th>Table Heading 1</th>
+			<th>Table Heading 2</th>
+			<th>Table Heading 3</th>
+		</tr>
+	</thead>
+	<tfoot>
+		<tr>
+			<th>Table Footer 1</th>
+			<th>Table Footer 2</th>
+			<th>Table Footer 3</th>
+		</tr>
+	</tfoot>
+	<tbody>
+		<tr>
+			<td>Table Cell 1</td>
+			<td>Table Cell 2</td>
+			<td>Table Cell 3</td>
+		</tr>
+		<tr>
+			<td>Table Cell 1</td>
+			<td>Table Cell 2</td>
+			<td>Table Cell 3</td>
+		</tr>
+		<tr>
+			<td>Table Cell 1</td>
+			<td>Table Cell 2</td>
+			<td>Table Cell 3</td>
+		</tr>
+		<tr>
+			<td>Table Cell 1</td>
+			<td>Table Cell 2</td>
+			<td>Table Cell 3</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;table&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;Table Heading 1&lt;/th&gt;
+			&lt;th&gt;Table Heading 2&lt;/th&gt;
+			&lt;th&gt;Table Heading 3&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tfoot&gt;
+		&lt;tr&gt;
+			&lt;th&gt;Table Footer 1&lt;/th&gt;
+			&lt;th&gt;Table Footer 2&lt;/th&gt;
+			&lt;th&gt;Table Footer 3&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/tfoot&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Table Cell 1&lt;/td&gt;
+			&lt;td&gt;Table Cell 2&lt;/td&gt;
+			&lt;td&gt;Table Cell 3&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Table Cell 1&lt;/td&gt;
+			&lt;td&gt;Table Cell 2&lt;/td&gt;
+			&lt;td&gt;Table Cell 3&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Table Cell 1&lt;/td&gt;
+			&lt;td&gt;Table Cell 2&lt;/td&gt;
+			&lt;td&gt;Table Cell 3&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Table Cell 1&lt;/td&gt;
+			&lt;td&gt;Table Cell 2&lt;/td&gt;
+			&lt;td&gt;Table Cell 3&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+</div>
 
-<h2>Typography</h2>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam enim sunt sapiente molestias, sed dicta inventore consectetur beatae asperiores, aliquid laboriosam animi, praesentium repudiandae et, quam saepe sint cupiditate reiciendis.</p>
+</div>
 
-<h1>Heading Level 1</h1>
-<h2>Heading Level 2</h2>
-<h3>Heading Level 3</h3>
-<h4>Heading Level 4</h4>
-<h5>Heading Level 5</h5>
-<h6>Heading Level 6</h6>
 
 	
 	<script src="/assets/toolkit/scripts/jquery.min.js"></script>
